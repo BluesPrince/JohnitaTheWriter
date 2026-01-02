@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Devil's Baby | A Novel by JaeLynae</title>
+    <meta name="description" content="A dark supernatural romance where love meets the forbidden. Listen to the audiobook and discover Ebony's story.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="series-tag">Book One of the Infernal Series</p>
+            <h1 class="title">The Devil's Baby</h1>
+            <p class="author">A Novel by <span class="pen-name">JaeLynae</span></p>
+            <p class="tagline">Some loves are born in fire. Some are forged in darkness.</p>
+            <a href="#listen" class="cta-button">Listen Now</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- Book Synopsis -->
+    <section class="synopsis">
+        <div class="container">
+            <div class="synopsis-content">
+                <h2>The Story</h2>
+                <p class="lead">Ebony thought she knew what danger looked like. She was wrong.</p>
+                <p>When a chance encounter pulls her into a world she never knew existed, Ebony finds herself caught between two realms—and two men who will stop at nothing to claim her. One offers her protection. The other offers her power. Both demand everything she has.</p>
+                <p>In a world where angels fall and demons rise, the child she carries might be the only thing that can tip the balance. But whose side will she choose when the father of her baby is the devil himself?</p>
+                <div class="genre-tags">
+                    <span class="tag">Dark Romance</span>
+                    <span class="tag">Supernatural</span>
+                    <span class="tag">Black Fiction</span>
+                </div>
+            </div>
+            <div class="book-cover">
+                <img src="assets/images/book-cover.png" alt="The Devil's Baby Book Cover" class="cover-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Character Showcase -->
+    <section class="character-showcase">
+        <div class="container">
+            <h2>Meet Ebony</h2>
+            <div class="character-grid">
+                <div class="character-image">
+                    <img src="assets/images/ebony-casual-1.png" alt="Ebony - The Devil's Baby" loading="lazy">
+                </div>
+                <div class="character-image">
+                    <img src="assets/images/ebony-hero.jpg" alt="Ebony - Supernatural Form" loading="lazy">
+                </div>
+                <div class="character-image">
+                    <img src="assets/images/ebony-casual-2.png" alt="Ebony - Portrait" loading="lazy">
+                </div>
+            </div>
+            <p class="character-description">Strong. Defiant. Caught between worlds. Ebony's journey will challenge everything you think you know about love, sacrifice, and destiny.</p>
+        </div>
+    </section>
+
+    <!-- Audiobook Player Section -->
+    <section id="listen" class="audiobook-section">
+        <div class="container">
+            <h2>Listen to the Audiobook</h2>
+            <p class="section-intro">Experience The Devil's Baby brought to life. Select a chapter below.</p>
+
+            <div class="player-container">
+                <div class="now-playing">
+                    <div class="album-art">
+                        <img src="assets/images/ebony-hero.jpg" alt="Now Playing">
+                    </div>
+                    <div class="track-info">
+                        <h3 class="chapter-title">Chapter 1</h3>
+                        <p class="chapter-subtitle">The Beginning</p>
+                    </div>
+                </div>
+
+                <div class="audio-controls">
+                    <audio id="audioPlayer" preload="metadata">
+                        <source src="audio/chapter-01.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <div class="progress-container">
+                        <span class="time-current">0:00</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="progress"></div>
+                        </div>
+                        <span class="time-total">0:00</span>
+                    </div>
+
+                    <div class="control-buttons">
+                        <button class="control-btn" id="prevBtn" title="Previous Chapter">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+                        </button>
+                        <button class="control-btn play-btn" id="playBtn" title="Play">
+                            <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                        </button>
+                        <button class="control-btn" id="nextBtn" title="Next Chapter">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="chapter-list">
+                    <h4>Chapters</h4>
+                    <ul id="chapterList">
+                        <li class="chapter-item active" data-chapter="1" data-src="audio/chapter-01.mp3">
+                            <span class="chapter-num">01</span>
+                            <span class="chapter-name">The Beginning</span>
+                            <span class="chapter-duration">--:--</span>
+                        </li>
+                        <li class="chapter-item" data-chapter="2" data-src="audio/chapter-02.mp3">
+                            <span class="chapter-num">02</span>
+                            <span class="chapter-name">First Encounter</span>
+                            <span class="chapter-duration">--:--</span>
+                        </li>
+                        <li class="chapter-item" data-chapter="3" data-src="audio/chapter-03.mp3">
+                            <span class="chapter-num">03</span>
+                            <span class="chapter-name">The Revelation</span>
+                            <span class="chapter-duration">--:--</span>
+                        </li>
+                        <li class="chapter-item" data-chapter="4" data-src="audio/chapter-04.mp3">
+                            <span class="chapter-num">04</span>
+                            <span class="chapter-name">Descent</span>
+                            <span class="chapter-duration">--:--</span>
+                        </li>
+                        <li class="chapter-item" data-chapter="5" data-src="audio/chapter-05.mp3">
+                            <span class="chapter-num">05</span>
+                            <span class="chapter-name">The Choice</span>
+                            <span class="chapter-duration">--:--</span>
+                        </li>
+                        <li class="chapter-item" data-chapter="6" data-src="audio/chapter-06.mp3">
+                            <span class="chapter-num">06</span>
+                            <span class="chapter-name">Awakening</span>
+                            <span class="chapter-duration">--:--</span>
+                        </li>
+                        <li class="chapter-item locked" data-chapter="7">
+                            <span class="chapter-num">07</span>
+                            <span class="chapter-name">Coming Soon</span>
+                            <span class="lock-icon">🔒</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Signup -->
+    <section class="signup-section">
+        <div class="container">
+            <div class="signup-content">
+                <h2>Get Notified</h2>
+                <p>Be the first to know when new chapters drop and when the full audiobook releases.</p>
+                <form class="signup-form" id="signupForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Notify Me</button>
+                </form>
+                <p class="privacy-note">No spam. Just updates about The Devil's Baby.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Author -->
+    <section class="author-section">
+        <div class="container">
+            <div class="author-content">
+                <div class="author-image">
+                    <img src="assets/images/author.png" alt="JaeLynae - Author" class="author-photo">
+                </div>
+                <div class="author-bio">
+                    <h2>About JaeLynae</h2>
+                    <p>JaeLynae writes the stories that haunt her dreams—dark romances where love isn't safe, and happily ever afters are earned in blood and fire.</p>
+                    <p>When she's not crafting supernatural worlds, she's pursuing her Master's degree and working on her next two novels. The Devil's Baby is her debut into the dark fantasy romance genre.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/jaelynae" target="_blank" rel="noopener" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            @jaelynae
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon / Series -->
+    <section class="series-section">
+        <div class="container">
+            <h2>The Infernal Series</h2>
+            <p class="section-intro">The Devil's Baby is just the beginning.</p>
+            <div class="series-grid">
+                <div class="series-book current">
+                    <img src="assets/images/book-cover.png" alt="The Devil's Baby" class="series-cover">
+                    <h3>The Devil's Baby</h3>
+                    <span class="status available">Available Now</span>
+                </div>
+                <div class="series-book upcoming">
+                    <div class="book-placeholder">
+                        <span>Book 2</span>
+                    </div>
+                    <h3>Title TBA</h3>
+                    <span class="status coming">Coming 2026</span>
+                </div>
+                <div class="series-book upcoming">
+                    <div class="book-placeholder">
+                        <span>Book 3</span>
+                    </div>
+                    <h3>Title TBA</h3>
+                    <span class="status coming">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="copyright">&copy; 2025 JaeLynae. All rights reserved.</p>
+                <p class="built-by">
+                    Audiobook & Landing Page by
+                    <a href="https://bluesprincemedia.com" target="_blank" rel="noopener">Blues Prince Media</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="player.js"></script>
+</body>
+</html>

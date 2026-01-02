@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Source assets (keep in separate storage, too large for git)
+Johnita-Smith/
+Eleven Labs_preedited/
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.local
