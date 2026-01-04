@@ -18,14 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const playIcon = document.querySelector('.play-icon');
     const pauseIcon = document.querySelector('.pause-icon');
 
-    // Chapter data - update sources when audio files are added
+    // Chapter data - chapters 3-6 available, 1-2 coming soon
     const chapters = [
-        { num: 1, name: 'The Beginning', src: 'audio/chapter-01.mp3' },
-        { num: 2, name: 'First Encounter', src: 'audio/chapter-02.mp3' },
-        { num: 3, name: 'The Revelation', src: 'audio/chapter-03.mp3' },
-        { num: 4, name: 'Descent', src: 'audio/chapter-04.mp3' },
-        { num: 5, name: 'The Choice', src: 'audio/chapter-05.mp3' },
-        { num: 6, name: 'Awakening', src: 'audio/chapter-06.mp3' }
+        { num: 3, name: 'The Revelation', src: 'audio/chapter-03.mp3', duration: '9:52' },
+        { num: 4, name: 'Descent', src: 'audio/chapter-04.mp3', duration: '22:03' },
+        { num: 5, name: 'The Choice', src: 'audio/chapter-05.mp3', duration: '15:21' },
+        { num: 6, name: 'Awakening', src: 'audio/chapter-06.mp3', duration: '23:32' }
     ];
 
     let currentChapter = 0;
@@ -67,8 +65,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Update active state in chapter list
         const items = chapterList.querySelectorAll('.chapter-item:not(.locked)');
-        items.forEach((item, i) => {
-            item.classList.toggle('active', i === index);
+        items.forEach((item) => {
+            const itemChapterNum = parseInt(item.dataset.chapter);
+            item.classList.toggle('active', itemChapterNum === chapter.num);
         });
 
         // Reset progress
@@ -140,10 +139,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!item || item.classList.contains('locked')) return;
 
         const chapterNum = parseInt(item.dataset.chapter);
-        const index = chapterNum - 1;
+        // Map chapter numbers to array index (ch3 = index 0, ch4 = index 1, etc)
+        const index = chapterNum - 3;
 
-        loadChapter(index);
-        togglePlay();
+        if (index >= 0 && index < chapters.length) {
+            loadChapter(index);
+            togglePlay();
+        }
     }
 
     // Event listeners
